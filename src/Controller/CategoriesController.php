@@ -31,8 +31,7 @@ class CategoriesController extends AppController
      * View method
      *
      * @param string|null $id Category id.
-     * @return \Cake\Network\Response|null
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+     * @return void
      */
     public function view($id = null)
     {
