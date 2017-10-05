@@ -41,7 +41,6 @@ class CategoriesTable extends Table
 
         $this->addBehavior('Timestamp');
         $this->addBehavior('Tree');
-        $this->addBehavior('Muffin/Trash.Trash');
         $this->addBehavior('Muffin/Slug.Slug', [
             'unique' => function (Entity $entity, $slug, $separator) {
                 return $this->_uniqueSlug($entity, $slug, $separator);
