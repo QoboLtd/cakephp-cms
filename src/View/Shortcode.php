@@ -122,6 +122,7 @@ class Shortcode
         }
 
         $result = '';
+        $files = [];
         foreach ($iterator as $file) {
             if (!$file->isFile()) {
                 continue;
@@ -149,7 +150,29 @@ class Shortcode
 
             $image = $options['roots'][0]['URL'] . '/' . $options['roots'][0]['tmbPath'] . '/' . $tmbname;
             $link = '/' . $path . '/' . $file->getFilename();
-            $result .= sprintf($html['item'], $link, $image);
+
+            array_push($files, [
+                'name' => $file->getFilename(),
+                'image' => $image,
+                'link' => $link,
+            ]);
+        }
+
+        $names = array_map(
+            function ($item) {
+                return $item['name'];
+            },
+            $files
+        );
+
+        sort($names, SORT_NATURAL);
+
+        foreach ($names as $k => $item) {
+            foreach ($files as $file) {
+               if ($file['name'] == $item) {
+                   $result .= sprintf($html['item'], $file['link'], $file['image']);
+               }
+            }
         }
 
         $result = sprintf($html['wrapper'], $result);
