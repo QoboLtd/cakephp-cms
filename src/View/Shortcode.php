@@ -169,9 +169,9 @@ class Shortcode
 
         foreach ($names as $k => $item) {
             foreach ($files as $file) {
-               if ($file['name'] == $item) {
-                   $result .= sprintf($html['item'], $file['link'], $file['image']);
-               }
+                if ($file['name'] == $item) {
+                    $result .= sprintf($html['item'], $file['link'], $file['image']);
+                }
             }
         }
 
