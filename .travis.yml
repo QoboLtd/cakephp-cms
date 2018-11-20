@@ -32,7 +32,7 @@ matrix:
       env: PHPCS=1 COVERAGE=0 PHPSTAN=1
 
 install:
-  - composer validate --strict
+  - composer validate
   - composer install --no-interaction --no-progress --no-suggest
   - mkdir -p build/test-coverage build/test-results
 
