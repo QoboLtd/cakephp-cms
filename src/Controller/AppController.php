@@ -42,7 +42,7 @@ class AppController extends BaseController
         $table = $table->hasAssociation('Articles') ? $this->{$this->name}->Articles->getTarget() : $table;
 
         if (!$table instanceof ArticlesTable) {
-            return;
+            return null;
         }
 
         // pass article types to all Views

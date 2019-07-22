@@ -208,11 +208,11 @@ class CategoriesTable extends Table
      *
      * @param \Cake\Datasource\EntityInterface $entity Entity.
      * @param string $slug Slug.
-     * @param string $separator Separator.
+     * @param string|null $separator Separator.
      *
      * @return string Unique slug.
      */
-    protected function _uniqueSlug(EntityInterface $entity, ?string $slug, ?string $separator): string
+    protected function _uniqueSlug(EntityInterface $entity, string $slug, ?string $separator = null): string
     {
         $behavior = $this->getBehavior('Slug');
 

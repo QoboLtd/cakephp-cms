@@ -30,7 +30,7 @@
     "require": {
         "hashmode/cakephp-tinymce-elfinder": "^1.0",
         "muffin/slug": "^1.0",
-        "qobo/cakephp-utils": "^12.0"
+        "qobo/cakephp-utils": "^13.0"
     },
     "require-dev": {
         "qobo/cakephp-composer-dev": "^v1.0"
