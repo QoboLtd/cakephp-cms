@@ -5,6 +5,7 @@
     stopOnFailure="false"
     bootstrap="./tests/bootstrap.php"
     verbose="true"
+    convertDeprecationsToExceptions="false"
     >
     <php>
         <ini name="memory_limit" value="-1"/>
