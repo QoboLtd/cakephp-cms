@@ -2,6 +2,7 @@
 ##########################
 build/
 vendor/
+tmp/
 cghooks.lock
 
 composer.lock
