@@ -35,7 +35,7 @@ class ArticlesTableTest extends TestCase
         'plugin.cms.articles',
         'plugin.cms.categories',
         'plugin.cms.sites',
-        'plugin.Burzum/FileStorage.file_storage'
+        'plugin.Burzum/FileStorage.file_storage',
     ];
 
     /**
@@ -110,7 +110,7 @@ class ArticlesTableTest extends TestCase
             'type' => 'article',
             'excerpt' => '',
             'created_by' => '00000000-0000-0000-0000-000000000001',
-            'modified_by' => '00000000-0000-0000-0000-000000000002'
+            'modified_by' => '00000000-0000-0000-0000-000000000002',
         ];
         $entity = $this->Articles->newEntity();
         $entity = $this->Articles->patchEntity($entity, $data);
@@ -144,7 +144,7 @@ class ArticlesTableTest extends TestCase
             'excerpt' => '',
             'created_by' => '162deb54-dc40-4967-b6d2-451c371fdb2d',
             'modified_by' => '63be1f3e-3628-49c7-9f6b-1a7013e154f4',
-            'type' => 'article'
+            'type' => 'article',
         ];
 
         $entity = $this->Articles->newEntity();
@@ -294,7 +294,7 @@ class ArticlesTableTest extends TestCase
     {
         $ids = [
             '00000000-0000-0000-0000-000000000001',
-            '00000000-0000-0000-0000-000000000002'
+            '00000000-0000-0000-0000-000000000002',
         ];
 
         $entities = $this->Articles->getArticlesByCategory($ids);
@@ -318,7 +318,7 @@ class ArticlesTableTest extends TestCase
             'type' => 'article',
             'publish_date' => '2017-10-05 18:30:00',
             'created_by' => '00000000-0000-0000-0000-000000000001',
-            'modified_by' => '00000000-0000-0000-0000-000000000001'
+            'modified_by' => '00000000-0000-0000-0000-000000000001',
         ];
 
         $entity = $this->Articles->newEntity();

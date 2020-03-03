@@ -9,7 +9,7 @@ class AppController extends Controller
     {
         parent::initialize();
         $this->loadComponent('Auth', [
-            'authenticate' => ['Form']
+            'authenticate' => ['Form'],
         ]);
 
         $this->loadComponent('Flash');

@@ -58,21 +58,21 @@ class CategoriesTable extends Table
         $this->addBehavior('Muffin/Slug.Slug', [
             'unique' => function (EntityInterface $entity, $slug, $separator) {
                 return $this->_uniqueSlug($entity, $slug, $separator);
-            }
+            },
         ]);
 
         $this->belongsTo('Cms.Sites');
         $this->belongsTo('ParentCategories', [
             'className' => 'Cms.Categories',
-            'foreignKey' => 'parent_id'
+            'foreignKey' => 'parent_id',
         ]);
         $this->hasMany('ChildCategories', [
             'className' => 'Cms.Categories',
-            'foreignKey' => 'parent_id'
+            'foreignKey' => 'parent_id',
         ]);
         $this->hasMany('Cms.Articles', [
             'foreignKey' => 'category_id',
-            'sort' => ['Articles.publish_date' => 'DESC']
+            'sort' => ['Articles.publish_date' => 'DESC'],
         ]);
     }
 
@@ -143,9 +143,9 @@ class CategoriesTable extends Table
                     'Categories.site_id' => $site->id,
                     'OR' => [
                         'Categories.id' => $id,
-                        'Categories.slug' => $id
-                    ]
-                ]
+                        'Categories.slug' => $id,
+                    ],
+                ],
             ])
             ->limit(1);
         $query->enableHydration(true);
@@ -189,7 +189,7 @@ class CategoriesTable extends Table
 
         $query = $this->find('treeList', [
                 'conditions' => $conditions,
-                'spacer' => static::TREE_SPACER
+                'spacer' => static::TREE_SPACER,
             ]);
 
         if ($filteredArticles) {

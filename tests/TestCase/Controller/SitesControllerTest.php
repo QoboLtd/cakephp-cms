@@ -15,7 +15,7 @@ class SitesControllerTest extends IntegrationTestCase
         'plugin.cms.sites',
         'plugin.cms.articles',
         'plugin.cms.categories',
-        'plugin.cms.file_storage'
+        'plugin.cms.file_storage',
     ];
 
     public function setUp()
@@ -153,7 +153,7 @@ class SitesControllerTest extends IntegrationTestCase
     {
         return [
             ['00000000-0000-0000-0000-000000000001'],
-            ['blog']
+            ['blog'],
         ];
     }
 }

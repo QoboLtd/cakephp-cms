@@ -31,7 +31,7 @@ class ArticleFeaturedImagesTable extends FileStorageTable
         $entity = $this->patchEntity($entity, [
             'adapter' => 'Local',
             'model' => 'ArticleFeaturedImage',
-            'foreign_key' => $articleId
+            'foreign_key' => $articleId,
         ]);
 
         return $this->save($entity);

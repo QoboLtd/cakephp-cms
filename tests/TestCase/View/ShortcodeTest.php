@@ -14,7 +14,7 @@ class ShortcodeTest extends TestCase
     {
         $content = 'A plain [foo] shortcode.';
         $expected = [
-            ['full' => '[foo]', 'name' => 'foo', 'params' => [], 'content' => '']
+            ['full' => '[foo]', 'name' => 'foo', 'params' => [], 'content' => ''],
         ];
 
         $this->assertEquals($expected, Shortcode::get($content));
@@ -24,7 +24,7 @@ class ShortcodeTest extends TestCase
     {
         $content = 'A plain [foo][/foo] shortcode.';
         $expected = [
-            ['full' => '[foo][/foo]', 'name' => 'foo', 'params' => [], 'content' => '']
+            ['full' => '[foo][/foo]', 'name' => 'foo', 'params' => [], 'content' => ''],
         ];
 
         $this->assertEquals($expected, Shortcode::get($content));
@@ -38,8 +38,8 @@ class ShortcodeTest extends TestCase
                 'full' => '[foo]Hello World![/foo]',
                 'name' => 'foo',
                 'params' => [],
-                'content' => 'Hello World!'
-            ]
+                'content' => 'Hello World!',
+            ],
         ];
 
         $this->assertEquals($expected, Shortcode::get($content));
@@ -53,8 +53,8 @@ class ShortcodeTest extends TestCase
                 'full' => '[foo hello="world" world=\'hello\']',
                 'name' => 'foo',
                 'params' => ['hello' => 'world', 'world' => 'hello'],
-                'content' => ''
-            ]
+                'content' => '',
+            ],
         ];
 
         $this->assertEquals($expected, Shortcode::get($content));
@@ -68,8 +68,8 @@ class ShortcodeTest extends TestCase
                 'full' => '[foo hello="world" world=\'hello\'][/foo]',
                 'name' => 'foo',
                 'params' => ['hello' => 'world', 'world' => 'hello'],
-                'content' => ''
-            ]
+                'content' => '',
+            ],
         ];
 
         $this->assertEquals($expected, Shortcode::get($content));
@@ -83,8 +83,8 @@ class ShortcodeTest extends TestCase
                 'full' => '[foo hello="world" world=\'hello\']Hello World![/foo]',
                 'name' => 'foo',
                 'params' => ['hello' => 'world', 'world' => 'hello'],
-                'content' => 'Hello World!'
-            ]
+                'content' => 'Hello World!',
+            ],
         ];
 
         $this->assertEquals($expected, Shortcode::get($content));

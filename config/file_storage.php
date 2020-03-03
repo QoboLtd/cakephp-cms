@@ -21,7 +21,7 @@ return [
                 'tiny' => [
                     'thumbnail' => ['width' => 50, 'height' => 50],
                 ],
-            ]
-        ]
-    ]
+            ],
+        ],
+    ],
 ];

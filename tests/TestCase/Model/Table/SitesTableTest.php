@@ -31,7 +31,7 @@ class SitesTableTest extends TestCase
         'plugin.cms.articles',
         'plugin.cms.categories',
         'plugin.cms.sites',
-        'plugin.Burzum/FileStorage.file_storage'
+        'plugin.Burzum/FileStorage.file_storage',
     ];
 
     /**

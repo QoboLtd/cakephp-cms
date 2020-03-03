@@ -68,7 +68,7 @@ class Shortcode
                 'full' => $match,
                 'name' => $matches[2][$k],
                 'params' => static::getParams($match),
-                'content' => $matches[5][$k]
+                'content' => $matches[5][$k],
             ];
         }
 
@@ -176,7 +176,7 @@ class Shortcode
         $html = [
             'wrapper' => '<div class="row">%s</div>',
             'item' => '<div class="col-xs-4 col-md-3 col-lg-2"><a href="%s" data-lightbox="gallery"><img src="%s" class="thumbnail"/></a></div>',
-            'error' => '<div class="alert alert-danger" role="alert">%s</div>'
+            'error' => '<div class="alert alert-danger" role="alert">%s</div>',
         ];
 
         $path = !empty($params['path']) ? $params['path'] : '';

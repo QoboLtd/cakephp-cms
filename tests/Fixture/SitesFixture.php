@@ -49,7 +49,7 @@ class SitesFixture extends TestFixture
             'active' => 1,
             'created' => '2017-04-11 10:00:32',
             'modified' => '2017-04-11 10:00:32',
-            'trashed' => null
+            'trashed' => null,
         ],
     ];
 }

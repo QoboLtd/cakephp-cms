@@ -53,7 +53,7 @@ class CategoriesFixture extends TestFixture
             'created' => '2017-04-11 10:00:25',
             'modified' => '2017-04-11 10:00:25',
             'site_id' => '00000000-0000-0000-0000-000000000001',
-            'trashed' => null
+            'trashed' => null,
         ],
         [
             'id' => '00000000-0000-0000-0000-000000000002',
@@ -65,7 +65,7 @@ class CategoriesFixture extends TestFixture
             'created' => '2017-04-11 10:00:25',
             'modified' => '2017-04-11 10:00:25',
             'site_id' => '00000000-0000-0000-0000-000000000001',
-            'trashed' => null
+            'trashed' => null,
         ],
     ];
 }

@@ -54,7 +54,7 @@ class ArticlesTable extends Table
     protected $_fieldDefaults = [
         'renderAs' => 'text',
         'required' => true,
-        'editor' => false
+        'editor' => false,
     ];
 
     /**
@@ -90,27 +90,27 @@ class ArticlesTable extends Table
         $this->addBehavior('Muffin/Slug.Slug', [
             'unique' => function (EntityInterface $entity, $slug, $separator) {
                 return $this->_uniqueSlug($entity, $slug, $separator);
-            }
+            },
         ]);
 
         $this->hasMany('ArticleFeaturedImages', [
             'className' => 'Cms.ArticleFeaturedImages',
             'foreignKey' => 'foreign_key',
             'conditions' => [
-                'ArticleFeaturedImages.model' => 'ArticleFeaturedImage'
+                'ArticleFeaturedImages.model' => 'ArticleFeaturedImage',
             ],
-            'sort' => ['ArticleFeaturedImages.created' => 'DESC']
+            'sort' => ['ArticleFeaturedImages.created' => 'DESC'],
         ]);
         $this->belongsTo('Cms.Sites');
         $this->belongsTo('Cms.Categories');
         $this->belongsTo('Author', [
             'className' => 'CakeDC/Users.Users',
-            'foreignKey' => 'created_by'
+            'foreignKey' => 'created_by',
         ]);
 
         $this->belongsTo('Editor', [
             'className' => 'CakeDC/Users.Users',
-            'foreignKey' => 'modified_by'
+            'foreignKey' => 'modified_by',
         ]);
     }
 
@@ -309,7 +309,7 @@ class ArticlesTable extends Table
         if ($associated) {
             $contain = [
                 'Categories',
-                'ArticleFeaturedImages'
+                'ArticleFeaturedImages',
             ];
         }
 
@@ -317,8 +317,8 @@ class ArticlesTable extends Table
             ->where([
                 'OR' => [
                     'Articles.id' => $id,
-                    'Articles.slug' => $id
-                ]
+                    'Articles.slug' => $id,
+                ],
             ]);
         $query->enableHydration(true);
         $query->limit(1);
@@ -359,7 +359,7 @@ class ArticlesTable extends Table
         if ($associated) {
             $contain = [
                 'Categories',
-                'ArticleFeaturedImages'
+                'ArticleFeaturedImages',
             ];
         }
 

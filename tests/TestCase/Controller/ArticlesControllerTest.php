@@ -17,7 +17,7 @@ class ArticlesControllerTest extends IntegrationTestCase
         'plugin.cms.articles',
         'plugin.cms.categories',
         'plugin.cms.sites',
-        'plugin.cms.file_storage'
+        'plugin.cms.file_storage',
     ];
 
     public function setUp()
@@ -94,7 +94,7 @@ class ArticlesControllerTest extends IntegrationTestCase
             'excerpt' => 'Some excerpt',
             'publish_date' => '2017-10-06 11:35:00',
             'category_id' => '00000000-0000-0000-0000-000000000001',
-            'file' => ['name' => 'test-file.png', 'error' => false]
+            'file' => ['name' => 'test-file.png', 'error' => false],
         ];
         $this->post('/cms/site/blog/articles/add/article', $data);
 
@@ -130,7 +130,7 @@ class ArticlesControllerTest extends IntegrationTestCase
     {
         $data = [
             'title' => 'Modified article title',
-            'file' => ['name' => 'test-file.png', 'error' => false]
+            'file' => ['name' => 'test-file.png', 'error' => false],
         ];
         $this->put('/cms/site/blog/articles/edit/article/' . $id, $data);
 
@@ -171,7 +171,7 @@ class ArticlesControllerTest extends IntegrationTestCase
     {
         $data = [
             'title' => 'Modified article title',
-            'file' => ['name' => 'test-file.png', 'error' => $code]
+            'file' => ['name' => 'test-file.png', 'error' => $code],
         ];
         $this->put('/cms/site/blog/articles/edit/article/first-article', $data);
 
@@ -189,7 +189,7 @@ class ArticlesControllerTest extends IntegrationTestCase
     {
         $data = [
             'title' => 'Modified article title',
-            'file' => ['name' => 'test-file.png', 'error' => UPLOAD_ERR_NO_FILE]
+            'file' => ['name' => 'test-file.png', 'error' => UPLOAD_ERR_NO_FILE],
         ];
         $this->put('/cms/site/blog/articles/edit/article/first-article', $data);
 
@@ -232,7 +232,7 @@ class ArticlesControllerTest extends IntegrationTestCase
     {
         return [
             ['00000000-0000-0000-0000-000000000001'],
-            ['first-article']
+            ['first-article'],
         ];
     }
 
@@ -248,7 +248,7 @@ class ArticlesControllerTest extends IntegrationTestCase
             [6, 'Missing a temporary folder'],
             [7, 'Failed to write file to disk'],
             [8, 'File upload stopped by extension'],
-            [1234, 'Unknown upload error']
+            [1234, 'Unknown upload error'],
         ];
     }
 }

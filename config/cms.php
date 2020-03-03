@@ -5,8 +5,8 @@ return [
         'Sidebar' => [
             'display' => [
                 'categories' => true,
-                'types' => true
-            ]
+                'types' => true,
+            ],
         ],
         'Articles' => [
             'types' => [
@@ -16,21 +16,21 @@ return [
                     'icon' => 'pencil-square',
                     'fields' => [
                         'Title' => [
-                            'field' => 'title'
+                            'field' => 'title',
                         ],
                         'Featured Image' => [
                             'field' => 'featured_image',
-                            'renderAs' => 'file'
+                            'renderAs' => 'file',
                         ],
                         'Excerpt' => [
-                            'field' => 'excerpt'
+                            'field' => 'excerpt',
                         ],
                         'Content' => [
                             'field' => 'content',
                             'renderAs' => 'textarea',
-                            'editor' => true
+                            'editor' => true,
                         ],
-                    ]
+                    ],
                 ],
                 'document' => [
                     'enabled' => true,
@@ -38,14 +38,14 @@ return [
                     'icon' => 'file-text',
                     'fields' => [
                         'Name' => [
-                            'field' => 'title'
+                            'field' => 'title',
                         ],
                         'Description' => [
                             'field' => 'content',
                             'renderAs' => 'textarea',
-                            'editor' => true
-                        ]
-                    ]
+                            'editor' => true,
+                        ],
+                    ],
                 ],
                 'gallery' => [
                     'enabled' => true,
@@ -57,17 +57,17 @@ return [
                         ],
                         'Featured Image' => [
                             'field' => 'featured_image',
-                            'renderAs' => 'file'
+                            'renderAs' => 'file',
                         ],
                         'Description' => [
                             'field' => 'excerpt',
-                            'renderAs' => 'textarea'
+                            'renderAs' => 'textarea',
                         ],
                         'Images' => [
                             'field' => 'content',
                             'renderAs' => 'textarea',
-                            'editor' => true
-                        ]
+                            'editor' => true,
+                        ],
                     ],
                 ],
                 'link' => [
@@ -76,13 +76,13 @@ return [
                     'icon' => 'link',
                     'fields' => [
                         'Title' => [
-                            'field' => 'title'
+                            'field' => 'title',
                         ],
                         'URL' => [
                             'field' => 'content',
-                            'renderAs' => 'url'
-                        ]
-                    ]
+                            'renderAs' => 'url',
+                        ],
+                    ],
                 ],
                 'faq' => [
                     'enabled' => true,
@@ -90,15 +90,15 @@ return [
                     'icon' => 'question-circle',
                     'fields' => [
                         'Question' => [
-                            'field' => 'title'
+                            'field' => 'title',
                         ],
                         'Answer' => [
                             'field' => 'content',
-                            'renderAs' => 'textarea'
-                        ]
-                    ]
+                            'renderAs' => 'textarea',
+                        ],
+                    ],
                 ],
-            ]
-        ]
-    ]
+            ],
+        ],
+    ],
 ];
