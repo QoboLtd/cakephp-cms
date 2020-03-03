@@ -35,10 +35,10 @@ class CategoriesTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'plugin.cms.categories',
-        'plugin.cms.sites',
-        'plugin.cms.articles',
-        'plugin.cms.users',
+        'plugin.Cms.Categories',
+        'plugin.Cms.Sites',
+        'plugin.Cms.Articles',
+        'plugin.Cms.Users',
     ];
 
     /**

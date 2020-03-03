@@ -14,10 +14,10 @@ use Cms\Model\Entity\Site;
 class ArticlesControllerTest extends IntegrationTestCase
 {
     public $fixtures = [
-        'plugin.cms.articles',
-        'plugin.cms.categories',
-        'plugin.cms.sites',
-        'plugin.cms.file_storage',
+        'plugin.Cms.Articles',
+        'plugin.Cms.Categories',
+        'plugin.Cms.Sites',
+        'plugin.Cms.FileStorage',
     ];
 
     public function setUp()

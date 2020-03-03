@@ -20,10 +20,10 @@ class CategoriesControllerTest extends IntegrationTestCase
     public $Categories;
 
     public $fixtures = [
-        'plugin.cms.categories',
-        'plugin.cms.articles',
-        'plugin.cms.sites',
-        'plugin.cms.file_storage',
+        'plugin.Cms.Categories',
+        'plugin.Cms.Articles',
+        'plugin.Cms.Sites',
+        'plugin.Cms.FileStorage',
     ];
 
     public function setUp()
