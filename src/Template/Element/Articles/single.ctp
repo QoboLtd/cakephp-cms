@@ -16,8 +16,8 @@ use Cake\Utility\Inflector;
 use Cms\View\Shortcode;
 
 // load lightbox library
-$this->Html->css('Qobo/Utils./plugins/lightbox2/css/lightbox.min', ['block' => 'css']);
-$this->Html->script('Qobo/Utils./plugins/lightbox2/js/lightbox.min', ['block' => 'scriptBottom']);
+$this->Html->css('Cms./plugins/lightbox2/css/lightbox.min', ['block' => 'css']);
+$this->Html->script('Cms./plugins/lightbox2/js/lightbox.min', ['block' => 'scriptBottom']);
 
 $element = 'Plugin/Cms/' . Inflector::camelize($article->type) . '/single';
 
