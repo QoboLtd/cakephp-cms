@@ -28,9 +28,12 @@
         }
     ],
     "require": {
+        "burzum/cakephp-file-storage": "dev-branch-2.0",
+        "burzum/cakephp-imagine-plugin": "dev-master#d21baf7378271d536982c8c0867fab3dcfa24cc8",
+        "cakephp/cakephp": "^3.5 <3.7",
         "hashmode/cakephp-tinymce-elfinder": "^1.0",
         "muffin/slug": "^1.0",
-        "qobo/cakephp-utils": "^13.0"
+        "muffin/trash": "^2.1"
     },
     "require-dev": {
         "qobo/cakephp-composer-dev": "^v1.0"

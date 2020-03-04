@@ -96,7 +96,7 @@ class ArticlesController extends AppController
             'site_id' => $site->id,
             'type' => $type,
             'created_by' => $this->Auth->user('id'),
-            'modified_by' => $this->Auth->user('id')
+            'modified_by' => $this->Auth->user('id'),
         ];
         $requestData = (array)$this->request->getData();
 
@@ -144,7 +144,7 @@ class ArticlesController extends AppController
         $data = [
             'site_id' => $site->id,
             'type' => $type,
-            'modified_by' => $this->Auth->user('id')
+            'modified_by' => $this->Auth->user('id'),
         ];
         $requestData = (array)$this->request->getData();
         $data = array_merge($requestData, $data);
@@ -215,7 +215,7 @@ class ArticlesController extends AppController
             // delete old image
             $this->Articles->ArticleFeaturedImages->deleteAll([
                 'ArticleFeaturedImages.foreign_key' => $articleId,
-                'ArticleFeaturedImages.path !=' => $entity->get('path')
+                'ArticleFeaturedImages.path !=' => $entity->get('path'),
             ]);
         }
     }

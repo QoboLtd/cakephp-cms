@@ -17,8 +17,8 @@ echo $this->Html->css(
         'AdminLTE./bower_components/bootstrap-daterangepicker/daterangepicker',
         'AdminLTE./bower_components/select2/dist/css/select2.min',
         'Cms.style',
-        'Qobo/Utils.select2-bootstrap.min',
-        'Qobo/Utils.select2-style'
+        'Cms.select2-bootstrap.min',
+        'Cms.select2-style'
     ],
     [
         'block' => 'css'

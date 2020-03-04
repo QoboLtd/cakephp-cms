@@ -50,7 +50,7 @@ class SitesTable extends Table
         ]);
         $this->hasMany('Cms.Articles', [
             'foreignKey' => 'site_id',
-            'sort' => ['Articles.publish_date' => 'DESC']
+            'sort' => ['Articles.publish_date' => 'DESC'],
         ]);
     }
 
@@ -128,9 +128,9 @@ class SitesTable extends Table
                     'Sites.active' => true,
                     'OR' => [
                         'Sites.id' => $id,
-                        'Sites.slug' => $id
-                    ]
-                ]
+                        'Sites.slug' => $id,
+                    ],
+                ],
             ])
             ->limit(1);
         // using objects over arrays.

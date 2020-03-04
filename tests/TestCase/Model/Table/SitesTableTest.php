@@ -28,10 +28,10 @@ class SitesTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'plugin.cms.articles',
-        'plugin.cms.categories',
-        'plugin.cms.sites',
-        'plugin.Burzum/FileStorage.file_storage'
+        'plugin.Cms.Articles',
+        'plugin.Cms.Categories',
+        'plugin.Cms.Sites',
+        'plugin.Cms.FileStorage',
     ];
 
     /**

@@ -62,7 +62,7 @@ class ArticlesFixture extends TestFixture
             'category_id' => '00000000-0000-0000-0000-000000000001',
             'trashed' => null,
             'site_id' => '00000000-0000-0000-0000-000000000001',
-            'type' => 'article'
+            'type' => 'article',
         ],
     ];
 }

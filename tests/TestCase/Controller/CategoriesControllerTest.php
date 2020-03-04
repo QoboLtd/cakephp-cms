@@ -20,10 +20,10 @@ class CategoriesControllerTest extends IntegrationTestCase
     public $Categories;
 
     public $fixtures = [
-        'plugin.cms.categories',
-        'plugin.cms.articles',
-        'plugin.cms.sites',
-        'plugin.cms.file_storage'
+        'plugin.Cms.Categories',
+        'plugin.Cms.Articles',
+        'plugin.Cms.Sites',
+        'plugin.Cms.FileStorage',
     ];
 
     public function setUp()
@@ -81,7 +81,7 @@ class CategoriesControllerTest extends IntegrationTestCase
     public function testAdd(): void
     {
         $data = [
-            'name' => 'Category 7'
+            'name' => 'Category 7',
         ];
         $this->post('/cms/site/blog/categories/add', $data);
 
@@ -200,7 +200,7 @@ class CategoriesControllerTest extends IntegrationTestCase
             ['00000000-0000-0000-0000-000000000001', 'down'],
             ['general', 'down'],
             ['00000000-0000-0000-0000-000000000002', 'up'],
-            ['news', 'up']
+            ['news', 'up'],
         ];
     }
 }

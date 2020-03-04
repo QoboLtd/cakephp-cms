@@ -69,7 +69,7 @@ class SitesController extends AppController
                 'plugin' => 'Cms',
                 'controller' => 'Sites',
                 'action' => 'view',
-                $site->get('slug')
+                $site->get('slug'),
             ];
         } else {
             $this->Flash->error((string)__('The site could not be saved. Please, try again.'));

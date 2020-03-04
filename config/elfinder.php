@@ -9,17 +9,17 @@ return [
             'width' => 900,
             'height' => 500,
             'resizable' => 'yes',
-            'soundPath' => '/cakephp_tinymce_elfinder/elfinder/sounds'
+            'soundPath' => '/cakephp_tinymce_elfinder/elfinder/sounds',
         ],
         'static_files' => [
             'js' => [
                 'jquery' => 'AdminLTE./bower_components/jquery/dist/jquery.min.js',
-                'jquery_ui' => 'Cms./plugins/jquery-ui/jquery-ui.min'
+                'jquery_ui' => 'Cms./plugins/jquery-ui/jquery-ui.min',
             ],
             'css' => [
                 'jquery_ui' => 'Cms./plugins/jquery-ui/jquery-ui.min',
-                'jquery_ui_theme' => 'Cms./plugins/jquery-ui/jquery-ui.theme.min'
-            ]
+                'jquery_ui_theme' => 'Cms./plugins/jquery-ui/jquery-ui.theme.min',
+            ],
         ],
         'options' => [
             // enabling debug modifies output buffering which causes rendering issues (task #4084)
@@ -33,7 +33,7 @@ return [
                     'attributes' => [
                         [
                             'pattern' => '!thumbnails!',
-                            'hidden' => true
+                            'hidden' => true,
                         ],
                     ],
                     'tmbPathMode' => 0755,
@@ -42,9 +42,9 @@ return [
                     'uploadOverwrite' => true,
                     'uploadMaxSize' => (string)ini_get('upload_max_filesize'),
                     'checkSubfolders' => false,
-                    'disabled' => []
-                ]
+                    'disabled' => [],
+                ],
             ],
-        ]
-    ]
+        ],
+    ],
 ];

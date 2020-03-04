@@ -12,10 +12,10 @@ use Cms\Model\Entity\Site;
 class SitesControllerTest extends IntegrationTestCase
 {
     public $fixtures = [
-        'plugin.cms.sites',
-        'plugin.cms.articles',
-        'plugin.cms.categories',
-        'plugin.cms.file_storage'
+        'plugin.Cms.Sites',
+        'plugin.Cms.Articles',
+        'plugin.Cms.Categories',
+        'plugin.Cms.FileStorage',
     ];
 
     public function setUp()
@@ -153,7 +153,7 @@ class SitesControllerTest extends IntegrationTestCase
     {
         return [
             ['00000000-0000-0000-0000-000000000001'],
-            ['blog']
+            ['blog'],
         ];
     }
 }
