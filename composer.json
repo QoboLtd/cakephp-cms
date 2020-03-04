@@ -33,8 +33,7 @@
         "cakephp/cakephp": "^3.5 <3.7",
         "hashmode/cakephp-tinymce-elfinder": "^1.0",
         "muffin/slug": "^1.0",
-        "muffin/trash": "^2.1",
-        "pyrech/composer-changelogs": "^1.4"
+        "muffin/trash": "^2.1"
     },
     "require-dev": {
         "qobo/cakephp-composer-dev": "^v1.0"
