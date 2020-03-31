@@ -47,7 +47,7 @@ class AppController extends BaseController
         // pass article types to all Views
         $this->set('types', $table->getTypes());
 
-        $searchQuery = $this->request->query('q') ?: '';
+        $searchQuery = $this->request->query('q') ? filter_var($this->request->query('q'), FILTER_SANITIZE_SPECIAL_CHARS) : '';
 
         $searchTitle = $searchQuery ? __('Search Results for') . ' \'' . $searchQuery . '\'' : '';
         // pass search title to all Views
