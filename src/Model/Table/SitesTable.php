@@ -12,7 +12,6 @@
 namespace Cms\Model\Table;
 
 use Cake\Datasource\EntityInterface;
-use Cake\ORM\Entity;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
