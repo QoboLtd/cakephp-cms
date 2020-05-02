@@ -42,11 +42,11 @@ class SitesTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::exists('Sites') ? [] : ['className' => 'Cms\Model\Table\SitesTable'];
+        $config = TableRegistry::getTableLocator()->exists('Sites') ? [] : ['className' => 'Cms\Model\Table\SitesTable'];
         /**
          * @var \Cms\Model\Table\SitesTable $table
          */
-        $table = TableRegistry::get('Sites', $config);
+        $table = TableRegistry::getTableLocator()->get('Sites', $config);
         $this->Sites = $table;
     }
 

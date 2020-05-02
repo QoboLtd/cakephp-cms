@@ -3,7 +3,8 @@ namespace Cms\Test\TestCase\Controller;
 
 use Cake\ORM\ResultSet;
 use Cake\ORM\TableRegistry;
-use Cake\TestSuite\IntegrationTestCase;
+use Cake\TestSuite\IntegrationTestTrait;
+use Cake\TestSuite\TestCase;
 use Cms\Model\Entity\Article;
 use Cms\Model\Entity\Site;
 
@@ -11,8 +12,10 @@ use Cms\Model\Entity\Site;
  * @property \Cms\Model\Table\ArticlesTable $Articles
  * @property \Cms\Model\Table\ArticleFeaturedImagesTable $ArticleFeaturedImages
  */
-class ArticlesControllerTest extends IntegrationTestCase
+class ArticlesControllerTest extends TestCase
 {
+    use IntegrationTestTrait;
+
     public $fixtures = [
         'plugin.Cms.Articles',
         'plugin.Cms.Categories',
@@ -37,7 +40,7 @@ class ArticlesControllerTest extends IntegrationTestCase
         /**
          * @var \Cms\Model\Table\ArticlesTable $table
          */
-        $table = TableRegistry::get('Cms.Articles');
+        $table = TableRegistry::getTableLocator()->get('Cms.Articles');
         $this->Articles = $table;
 
         // Save featured image

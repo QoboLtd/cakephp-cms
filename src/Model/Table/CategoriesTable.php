@@ -86,18 +86,18 @@ class CategoriesTable extends Table
     {
         $validator
             ->uuid('id')
-            ->allowEmpty('id', 'create');
+            ->allowEmptyString('id', null, 'create');
 
         $validator
-            ->notEmpty('slug');
+            ->notEmptyString('slug');
 
         $validator
             ->requirePresence('name', 'create')
-            ->notEmpty('name');
+            ->notEmptyString('name');
 
         $validator
             ->requirePresence('site_id', 'create')
-            ->notEmpty('site_id');
+            ->notEmptyString('site_id');
 
         return $validator;
     }

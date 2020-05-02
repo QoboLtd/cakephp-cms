@@ -124,36 +124,36 @@ class ArticlesTable extends Table
     {
         $validator
             ->uuid('id')
-            ->allowEmpty('id', 'create');
+            ->allowEmptyString('id', null, 'create');
 
         $validator
             ->requirePresence('title', 'create')
-            ->notEmpty('title');
+            ->notEmptyString('title');
 
         $validator
-            ->notEmpty('slug')
+            ->notEmptyString('slug')
             ->add('slug', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
         $validator
             ->requirePresence('content', 'create')
-            ->allowEmpty('content');
+            ->allowEmptyString('content');
 
         $validator
             ->requirePresence('category_id', 'create')
-            ->notEmpty('category_id');
+            ->notEmptyString('category_id');
 
         $validator
             ->dateTime('publish_date')
             ->requirePresence('publish_date', 'create')
-            ->notEmpty('publish_date');
+            ->notEmptyDateTime('publish_date');
 
         $validator
             ->requirePresence('site_id', 'create')
-            ->notEmpty('site_id');
+            ->notEmptyString('site_id');
 
         $validator
             ->requirePresence('type', 'create')
-            ->notEmpty('type');
+            ->notEmptyString('type');
 
         return $validator;
     }

@@ -46,11 +46,11 @@ class ArticlesTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::exists('Articles') ? [] : ['className' => 'Cms\Model\Table\ArticlesTable'];
+        $config = TableRegistry::getTableLocator()->exists('Articles') ? [] : ['className' => 'Cms\Model\Table\ArticlesTable'];
         /**
          * @var \Cms\Model\Table\ArticlesTable $table
          */
-        $table = TableRegistry::get('Articles', $config);
+        $table = TableRegistry::getTableLocator()->get('Articles', $config);
         $this->Articles = $table;
 
         // load default plugin config

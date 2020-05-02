@@ -2,7 +2,8 @@
 namespace Cms\Test\TestCase\Controller;
 
 use Cake\ORM\TableRegistry;
-use Cake\TestSuite\IntegrationTestCase;
+use Cake\TestSuite\IntegrationTestTrait;
+use Cake\TestSuite\TestCase;
 use Cms\Model\Entity\Category;
 use Cms\Model\Entity\Site;
 
@@ -10,8 +11,10 @@ use Cms\Model\Entity\Site;
  * @property \Cms\Model\Table\CategoriesTable $Categories
  * @property \Cms\Model\Table\ArticleFeaturedImagesTable $ArticleFeaturedImages
  */
-class CategoriesControllerTest extends IntegrationTestCase
+class CategoriesControllerTest extends TestCase
 {
+    use IntegrationTestTrait;
+
     /**
      * Category table
      *
@@ -43,7 +46,7 @@ class CategoriesControllerTest extends IntegrationTestCase
         /**
          * @var \Cms\Model\Table\CategoriesTable $table
          */
-        $table = TableRegistry::get('Cms.Categories');
+        $table = TableRegistry::getTableLocator()->get('Cms.Categories');
         $this->Categories = $table;
 
         // Save featured image
