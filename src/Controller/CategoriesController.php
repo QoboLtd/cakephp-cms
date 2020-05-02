@@ -11,7 +11,6 @@
  */
 namespace Cms\Controller;
 
-
 /**
  * Categories Controller
  *
