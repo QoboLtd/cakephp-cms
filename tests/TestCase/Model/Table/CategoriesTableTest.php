@@ -49,18 +49,18 @@ class CategoriesTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::exists('Categories') ? [] : ['className' => 'Cms\Model\Table\CategoriesTable'];
+        $config = TableRegistry::getTableLocator()->exists('Categories') ? [] : ['className' => 'Cms\Model\Table\CategoriesTable'];
         /**
          * @var \Cms\Model\Table\CategoriesTable $table
          */
-        $table = TableRegistry::get('Categories', $config);
+        $table = TableRegistry::getTableLocator()->get('Categories', $config);
         $this->CategoriesTable = $table;
 
-        $config = TableRegistry::exists('Sites') ? [] : ['className' => 'Cms\Model\Table\SitesTable'];
+        $config = TableRegistry::getTableLocator()->exists('Sites') ? [] : ['className' => 'Cms\Model\Table\SitesTable'];
         /**
          * @var \Cms\Model\Table\SitesTable $table
          */
-        $table = TableRegistry::get('Sites', $config);
+        $table = TableRegistry::getTableLocator()->get('Sites', $config);
         $this->Sites = $table;
     }
 

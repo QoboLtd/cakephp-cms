@@ -12,8 +12,6 @@
 namespace Cms\Controller;
 
 use Cake\Http\Exception\NotFoundException;
-use Cms\Controller\AppController;
-use Cms\Controller\UploadTrait;
 
 /**
  * Articles Controller

@@ -11,8 +11,6 @@
  */
 namespace Cms\Controller;
 
-use Cms\Controller\AppController;
-
 /**
  * Categories Controller
  *

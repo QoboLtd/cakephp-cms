@@ -3,7 +3,6 @@ namespace Cms\Test\TestCase\View;
 
 use Cms\View\Shortcode;
 use PHPUnit\Framework\TestCase;
-use stdClass;
 
 /**
  * Cms\Model\Table\ArticlesTable Test Case

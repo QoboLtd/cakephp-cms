@@ -3,14 +3,17 @@ namespace Cms\Test\TestCase\Controller;
 
 use Cake\ORM\ResultSet;
 use Cake\ORM\TableRegistry;
-use Cake\TestSuite\IntegrationTestCase;
+use Cake\TestSuite\IntegrationTestTrait;
+use Cake\TestSuite\TestCase;
 use Cms\Model\Entity\Site;
 
 /**
  * @property \Cms\Model\Table\SitesTable $Sites
  */
-class SitesControllerTest extends IntegrationTestCase
+class SitesControllerTest extends TestCase
 {
+    use IntegrationTestTrait;
+
     public $fixtures = [
         'plugin.Cms.Sites',
         'plugin.Cms.Articles',
@@ -35,7 +38,7 @@ class SitesControllerTest extends IntegrationTestCase
         /**
          * @var \Cms\Model\Table\SitesTable $table
          */
-        $table = TableRegistry::get('Cms.Sites');
+        $table = TableRegistry::getTableLocator()->get('Cms.Sites');
         $this->Sites = $table;
 
         // Save featured image

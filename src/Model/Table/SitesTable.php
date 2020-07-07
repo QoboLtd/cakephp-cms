@@ -12,7 +12,6 @@
 namespace Cms\Model\Table;
 
 use Cake\Datasource\EntityInterface;
-use Cake\ORM\Entity;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
@@ -64,21 +63,20 @@ class SitesTable extends Table
     {
         $validator
             ->uuid('id')
-            ->allowEmpty('id', 'create');
+            ->allowEmptyString('id', null, 'create');
 
         $validator
             ->requirePresence('name', 'create')
-            ->notEmpty('name')
+            ->notEmptyString('name')
             ->add('name', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
         $validator
-            ->notEmpty('slug')
+            ->notEmptyString('slug')
             ->add('slug', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
         $validator
             ->boolean('active')
-            ->requirePresence('active', 'create')
-            ->notEmpty('active');
+            ->requirePresence('active', 'create');
 
         return $validator;
     }
