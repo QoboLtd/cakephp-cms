@@ -15,6 +15,9 @@ class FixArticlesCreatedModifiedFields extends AbstractMigration
         $this->table('articles')
             ->removeColumn('created')
             ->removeColumn('modified')
+            ->save();
+
+        $this->table('articles')
             ->addColumn('created', 'datetime')
             ->addColumn('modified', 'datetime')
             ->save();

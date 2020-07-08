@@ -18,7 +18,10 @@ class UpdateArticlesFields extends AbstractMigration
             ->removeColumn('category')
             //Should be datetime for sorting the article by date.
             ->removeColumn('publish_date')
-            ->addColumn('publish_date', 'datetime', ['after' => 'modified_by']);
-        $table->update();
+            ->save();
+
+        $table
+            ->addColumn('publish_date', 'datetime', ['after' => 'modified_by'])
+            ->save();
     }
 }

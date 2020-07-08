@@ -13,6 +13,7 @@ class RenameCategoriesTable extends AbstractMigration
     public function change()
     {
         $this->table('categories')
-            ->rename('qobo_cms_categories');
+            ->rename('qobo_cms_categories')
+            ->save();
     }
 }
