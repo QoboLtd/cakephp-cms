@@ -13,6 +13,7 @@ class RenameArticlesTable extends AbstractMigration
     public function change()
     {
         $this->table('articles')
-            ->rename('qobo_cms_articles');
+            ->rename('qobo_cms_articles')
+            ->save();
     }
 }

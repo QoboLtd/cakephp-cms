@@ -13,6 +13,7 @@ class RenameSitesTable extends AbstractMigration
     public function change()
     {
         $this->table('sites')
-            ->rename('qobo_cms_sites');
+            ->rename('qobo_cms_sites')
+            ->save();
     }
 }
