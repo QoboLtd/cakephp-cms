@@ -23,7 +23,7 @@
     },
     "require": {
         "burzum/cakephp-file-storage": "^2.0",
-        "burzum/cakephp-imagine-plugin": "^2.0",
+        "burzum/cakephp-imagine-plugin": "^3.0",
         "cakephp/cakephp": "^3.8",
         "hashmode/cakephp-tinymce-elfinder": "^1.0",
         "muffin/slug": "^1.0",
