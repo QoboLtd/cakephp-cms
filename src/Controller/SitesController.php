@@ -20,6 +20,19 @@ use Cms\Controller\AppController;
  */
 class SitesController extends AppController
 {
+    public $paginate = [
+        'limit' => 10,
+        'order' => [
+            'Articles.created' => 'desc'
+        ]
+    ];
+
+    public function initialize()
+    {
+        parent::initialize();
+        $this->loadComponent('Paginator');
+    }
+
     /**
      * Index method
      *
@@ -42,9 +55,16 @@ class SitesController extends AppController
      */
     public function view($id = null)
     {
-        $site = $this->Sites->getSite($id, true, true);
+        $site = $this->Sites->getSite($id, true);
+        $articles = $this->paginate(
+            $this->Sites->Articles
+                ->find('all')
+                ->contain(['ArticleFeaturedImages'])
+                ->where(['site_id' => $site->id])
+        );
 
         $this->set('site', $site);
+        $this->set('articles', $articles);
         $this->set('categories', $this->Sites->Categories->getTreeList($site->id));
         $this->set('filteredCategories', $this->Sites->Categories->getTreeList($site->id, '', true));
         $this->set('_serialize', ['site']);
