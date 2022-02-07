@@ -18,7 +18,7 @@
 </section>
 <section class="content">
     <?= $this->element('Cms.Sites/manage', [
-        'articles' => $site->articles,
+        'articles' => $articles,
         'categories' => $categories,
         'site' => $site,
         'article' => null,
@@ -31,9 +31,19 @@
         <div class="col-xs-12 col-md-7 col-md-offset-1 col-md-pull-3">
             <?= $this->element('Cms.Articles/list', [
                 'site' => $site,
-                'articles' => $site->articles,
+                'articles' => $articles,
                 'articleTypes' => $types
             ]) ?>
+         <div class="paginator">
+             <?= $this->Paginator->counter([
+                 'format' => __('Showing {{start}} to {{end}} of {{count}} entries')
+             ]) ?>
+             <ul class="pagination pagination-sm no-margin pull-right">
+                 <?= $this->Paginator->prev('&laquo;', ['escape' => false]) ?>
+                 <?= $this->Paginator->numbers() ?>
+                 <?= $this->Paginator->next('&raquo;', ['escape' => false]) ?>
+             </ul>
+         </div>
         </div>
     </div>
 </section>
